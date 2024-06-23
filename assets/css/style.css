@@ -1,3 +1,7 @@
+/*-----------------------------------------------
+# General
+-----------------------------------------------*/
+
 body {
   background: #fff;
   color: white;
@@ -194,26 +198,6 @@ h6 {
   border: 2px solid rgb(180, 27, 27);
 }
 
-.about-content h1.about-title {
-  font-size: 2.5em;
-  color: red;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.about-content p.about-text {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-  margin-left: 10px;
-}
-
-.next{
-  margin-bottom: 10px;
-  margin-top: 0px;
-
- 
-}
-
 /* Highlighted Text Styling */
 .about-content p.about-text strong.highlight {
   
@@ -259,14 +243,86 @@ h6 {
   border-radius: 3px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-content h1.about-title {
-      font-size: 2em;
+/* Responsive Styles */
+@media (max-width: 991px) {
+  #header {
+    padding: 15px 0;
   }
 
-  .about-content p.about-text {
-      font-size: 1em;
+  #hero h1 {
+    font-size: 40px;
+  }
+
+  #hero h2 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+
+  .navbar-mobile a {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #333;
+  }
+
+  #hero h1 {
+    font-size: 32px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #hero h2 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
@@ -922,55 +978,161 @@ section {
   top: 4px;
 }
 
-/* Team Section
---------------------------------*/
+/* Team Section */
 #team {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/background-img.jpg) fixed center center;
-  padding: 100px 0 80px 0; /* Increased padding for more space */
+  background-size: cover;
+  padding: 100px 0 80px 0;
+  color: #fff;
+}
+
+#team .section-title {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 #team .member {
   text-align: center;
-  margin-bottom: 40px; /* Increased margin for more space between members */
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#team .member .pic-container {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 30px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 #team .member .pic {
-  margin-bottom: 20px; /* Increased margin for more space below the picture */
   overflow: hidden;
-  height: 260px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 228, 228, 0.432);
+  transition: all 0.3s ease;
 }
 
 #team .member .pic img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+#team .member:hover .pic {
+  transform: scale(1.05);
 }
 
 #team .member h4 {
   font-weight: 700;
-  margin-bottom: 10px; /* Increased margin for more space below the name */
-  margin-top: 30px; /* Increased margin for more space above the name */
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #fff;
 }
 
 #team .member span {
   font-style: italic;
   display: block;
-  font-size: 14px; /* Slightly increased font size for better readability */
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
 #team .member .social {
-  margin-top: 20px; /* Increased margin for more space above social icons */
+  margin-top: 15px;
 }
 
 #team .member .social a {
-  color: #b3b3b3;
+  color: #e0dcdc;
+  transition: 0.3s;
+  font-size: 20px;
+  margin: 0 8px;
+  display: inline-block;
 }
 
 #team .member .social a:hover {
   color: red;
 }
 
-#team .member .social i {
-  font-size: 18px;
-  margin: 0 5px; /* Increased margin for more space between icons */
+/* Responsive Styles */
+@media (max-width: 992px) {
+  #team {
+    padding: 80px 0 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #team .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  #team .member .pic-container {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 40px;
+  }
+
+  #team .member .member-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  #team .member h4 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  #team .member span {
+    font-size: 15px;
+  }
+
+  #team .member .social {
+    text-align: center;
+  }
+
+  #team .member .social a {
+    font-size: 18px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #team {
+    padding: 60px 0 40px 0;
+  }
+
+  #team .member {
+    padding: 20px;
+  }
+
+  #team .member .pic-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  #team .member h4 {
+    font-size: 20px;
+  }
+
+  #team .member span {
+    font-size: 14px;
+  }
+
+  #team .member .social a {
+    font-size: 16px;
+  }
 }
 
 
@@ -1099,7 +1261,7 @@ section {
 .breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
-  color: gray;
+  color: rgb(180, 180, 180);
   content: "/";
 }
 
@@ -1134,7 +1296,7 @@ section {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-  color: #ccc;
+  color: rgb(151, 148, 148);
 }
 
 #team {
@@ -1197,7 +1359,7 @@ section {
 .card-subtitle {
   display: block;
   font-size: 20px;
-  color: #888;
+  color: #4e4c4c;
 }
 
 .social a {
@@ -1214,19 +1376,6 @@ section {
   .card {
     margin-bottom: 20px;
   }
-}
-
-
-
-/* General styling for the about content */
-.about-content {
-  font-family: 'JetBrains Mono', monospace;
-  line-height: 1.6;
-  color: black;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling for the title */
@@ -1448,7 +1597,16 @@ section {
     background-color: #c82333; /* Darker red on hover */
   }
 
- 
+ /* General styling for the about content */
+.about-content {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
+  color: black;
+  padding: 80px 80px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
   .about-content {
     display: flex;
@@ -1460,7 +1618,7 @@ section {
   .about-content img.next {
     width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Adjusts space between image and text */
+    margin-bottom: 20px; /* Adjusts space between image and text */
    
   }
 
@@ -1472,6 +1630,24 @@ section {
     .about-container {
       flex-direction: row;
     }
+  }
+
+  .about-content h1.about-title {
+    font-size: 2.5em;
+    color: red;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .about-content p.about-text {
+    font-size: 1em;
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+  
+  .next{
+    margin-bottom: 10px;
+    margin-top: 0px;
   }
 
  
