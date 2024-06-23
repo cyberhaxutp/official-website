@@ -123,7 +123,7 @@ h6 {
 }
 
 #hero .hero-logo img {
-  max-width: 100%;
+  max-width: 70%;
 }
 
 #hero .hero-container {
@@ -160,6 +160,7 @@ h6 {
   color: #fff;
   transition: 0.3s;
   border-bottom: 2px solid red;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -967,9 +968,9 @@ section {
 }
 
 .perk img {
-  max-width: 100px; /* Adjust size as needed */
+  max-width: 300px; /* Adjust size as needed */
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .perk-title {
